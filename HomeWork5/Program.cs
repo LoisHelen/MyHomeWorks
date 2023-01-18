@@ -73,8 +73,8 @@ Console.WriteLine("Сумма элементов на нечетных пози�
 */
 
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементом массива.
-
-double[] CreateRandomDoubleArray(int size, double minValue, double maxValue)
+/*
+double[] CreateRandomDoubleArray(int size, int minValue, int maxValue)
 {
     double[] array = new double[size];
     for(int i = 0; i < size; i++)
@@ -86,18 +86,19 @@ double[] CreateRandomDoubleArray(int size, double minValue, double maxValue)
 void ShowArray(double[] array)
 {
     for(int i = 0; i < array.Length; i++)
-        Console.Write(array[i] + " ");
+        Console.WriteLine(array[i]);
     Console.WriteLine();
 }
 
 double GetDiff(double[] array)
 {
     double min = array[0];
-    for(int i = 1; i < array.Length; i++)
-        if(array[i] < min) min = array[i];
     double max = array[0];
     for(int i = 1; i < array.Length; i++)
+    {
+        if(array[i] < min) min = array[i];
         if(array[i] > max) max = array[i];
+    }
     double result = Math.Round(max - min, 2);
     return result;
 }
@@ -105,11 +106,12 @@ double GetDiff(double[] array)
 Console.WriteLine("Введите количество элементов массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите минимально-возможное значение элемента массива: ");
-double min = Convert.ToDouble(Console.ReadLine());
+int min = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите максимально-возможное значение элемента массива: ");
-double max = Convert.ToDouble(Console.ReadLine());
+int max = Convert.ToInt32(Console.ReadLine());
 
 double[] array = CreateRandomDoubleArray(length, min, max);
 ShowArray(array);
 
 Console.WriteLine("Разница между максимальным и минимальным элементом массива = " + GetDiff(array));
+*/
