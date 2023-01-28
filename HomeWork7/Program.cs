@@ -106,7 +106,7 @@ int result = ShowElement(myArray, m, n); // в случае с void убирае
 
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце (сначала j, потом i). Результат - одномерный массив
 
-/*
+
 int [,] CreateRandom2dArray()
 {
     Console.Write("Input a number of rows: ");
@@ -146,7 +146,7 @@ double[] AverageInColumns(int[,] array)
     {
         for(int i = 0; i < array.GetLength(0); i++)
             average[j] += array[i,j];
-        average[j] = average[j] / array.GetLength(0);
+        average[j] = Math.Round((average[j] / array.GetLength(0)),2);
     }
     
     return average;
@@ -165,4 +165,3 @@ Show2dArray(myArray);
 double[] myAverage = AverageInColumns(myArray);
 Console.WriteLine("Среднее арифметическое каждого столбца: ");
 ShowArray(myAverage);
-*/
